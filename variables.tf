@@ -24,7 +24,7 @@ variable "repository_visibility" {
 ################################################################################
 
 variable "branch_protection" {
-  description = "A list of branch protection maps for each rule to create"
+  description = "A list of branch protection maps for each rule to create. GitHub Pro needed for private repositories"
   type        = list(any)
   default     = []
 }
@@ -42,3 +42,15 @@ variable "teams" {
 ################################################################################
 # SECRETS
 ################################################################################
+
+variable "action_secrets" {
+  description = "A list of secret maps for each action secret to create"
+  type        = list(any)
+  default     = []
+}
+
+variable "dependabot_secrets" {
+  description = "A list of secret maps for each dependabot secret to create"
+  type        = list(any)
+  default     = []
+}

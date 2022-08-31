@@ -68,3 +68,31 @@ resource "github_team_repository" "this" {
 ################################################################################
 # SECRETS
 ################################################################################
+
+locals {
+  action_secrets_length = length(var.action_secrets)
+  action_secrets = merge(flatten([for i in range(local.action_secrets_length) :
+    { for entry in var.action_secrets : format("%s.%s", lookup(entry, "name"), i) => entry }
+  ])...)
+
+  dependabot_secrets_length = length(var.dependabot_secrets)
+  dependabot_secrets = merge(flatten([for i in range(local.dependabot_secrets_length) :
+    { for entry in var.dependabot_secrets : format("%s.%s", lookup(entry, "name"), i) => entry }
+  ])...)
+}
+
+resource "github_actions_secret" "this" {
+  for_each = local.action_secrets
+
+  repository      = github_repository.this.name
+  secret_name     = lookup(each.value, "name")
+  plaintext_value = lookup(each.value, "value")
+}
+
+resource "github_dependabot_secret" "this" {
+  for_each = local.dependabot_secrets
+
+  repository      = github_repository.this.name
+  secret_name     = lookup(each.value, "name")
+  plaintext_value = lookup(each.value, "value")
+}
