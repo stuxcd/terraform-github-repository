@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/stuxcd/terraform-github-repository/compare/v1.1.1...v1.2.0) (2022-08-31)
+
+
+### Features
+
+* **secrets:** add github secrets ([#3](https://github.com/stuxcd/terraform-github-repository/issues/3)) ([8faabcf](https://github.com/stuxcd/terraform-github-repository/commit/8faabcf8a354ba353b8db8c44db46ec18485f234))
+
 ### [1.1.1](https://github.com/stuxcd/terraform-github-repository/compare/v1.1.0...v1.1.1) (2022-08-31)
 
 
