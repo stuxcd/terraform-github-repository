@@ -53,7 +53,7 @@ resource "github_branch_protection" "this" {
 locals {
   teams_length = length(var.teams)
   teams = merge(flatten([for i in range(local.teams_length) :
-    { for entry in var.teams : format("%s.%s", lookup(entry, "permission", "push"), i) => entry }
+    { for entry in var.teams : format("%s.%s", lookup(entry, "permission", "pull"), i) => entry }
   ])...)
 }
 
