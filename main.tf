@@ -60,7 +60,7 @@ locals {
 resource "github_team_repository" "this" {
   for_each = local.teams
 
-  team_id    = lookup(each.value, "id")
+  team_id    = try(lookup(each.value, "id"), lookup(each.value, "name"))
   repository = github_repository.this.name
   permission = lookup(each.value, "permission")
 }
