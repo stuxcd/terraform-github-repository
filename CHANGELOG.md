@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.2.1](https://github.com/stuxcd/terraform-github-repository/compare/v1.2.0...v1.2.1) (2022-09-09)
+
+
+### Bug Fixes
+
+* **teams:** add team name backup ([097b750](https://github.com/stuxcd/terraform-github-repository/commit/097b7504edc13ea1b3002eddc78227a6d72827ac))
+
 ## [1.2.0](https://github.com/stuxcd/terraform-github-repository/compare/v1.1.1...v1.2.0) (2022-08-31)
 
 
