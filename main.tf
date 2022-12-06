@@ -15,8 +15,10 @@ resource "github_repository" "this" {
   vulnerability_alerts = true
 
   # merge strategy
-  allow_merge_commit = false
-  allow_rebase_merge = false
+  allow_merge_commit     = true
+  allow_rebase_merge     = false
+  allow_squash_merge     = true
+  delete_branch_on_merge = true
 
   lifecycle {
     prevent_destroy = true
