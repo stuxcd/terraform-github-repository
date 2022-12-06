@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.1](https://github.com/stuxcd/terraform-github-repository/compare/v1.3.0...v1.3.1) (2022-12-06)
+
+
+### Bug Fixes
+
+* **repository:** fix repository merge strategy ([#10](https://github.com/stuxcd/terraform-github-repository/issues/10)) ([0a3b9e0](https://github.com/stuxcd/terraform-github-repository/commit/0a3b9e01dbb444e2d8e11a7d36d7dc2c1546f13f))
+
 ## [1.3.0](https://github.com/stuxcd/terraform-github-repository/compare/v1.2.1...v1.3.0) (2022-12-06)
 
 
